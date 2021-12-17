@@ -1,4 +1,5 @@
-import {SEARCHDATA, ERROR} from '../reducers'
+import { SEARCHDATA, ERROR } from '../reducers'
+
 
 export const SearchData = (searchData) => {
     return{

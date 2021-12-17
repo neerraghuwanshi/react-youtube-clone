@@ -31,12 +31,13 @@ const Home = () => {
         setVideos(null)
         setSelectedVideo(null)
         axios.get(
-            'https://www.googleapis.com//youtube/v3/search',{
+            'https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',
+                type: 'video',
                 maxResults: 6,
                 key: 'AIzaSyA4wCw5Q05z3wU6YOepmF7kExJFO_rVlo8',
-                q: search
+                q: search,
             }
         }).then(response=>{
             setVideos(response.data.items.filter((item, index)=>index !== 0));

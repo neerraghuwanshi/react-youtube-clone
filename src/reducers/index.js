@@ -1,8 +1,10 @@
 import {createStore,applyMiddleware} from 'redux'
-import {composeWithDevTools} from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
 
-export const initialState = {searchData:localStorage.getItem('searchTerm'), error:{}}
+export const initialState = {
+    searchData: localStorage.getItem('searchTerm'), 
+    error: {},
+}
 
 export const SEARCHDATA = "SEARCHDATA"
 export const ERROR = "ERROR"
@@ -26,4 +28,8 @@ export const reducer = (state, action) => {
     }
 }
 
-export const store = createStore(reducer, initialState,composeWithDevTools(applyMiddleware(thunk)))
+export const store = createStore(
+    reducer, 
+    initialState,
+    applyMiddleware(thunk)
+)
