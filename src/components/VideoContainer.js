@@ -2,7 +2,7 @@ import React from 'react'
 
 import VideoList from './VideoList'
 import Iframe from './Iframe'
-import '../css/VideoContainer.css'
+import '../css/videoContainer.css'
 
 
 const VideoContainer = props => {
